@@ -1,0 +1,93 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(4,4,4);
+}
+.reloj{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-size:cover;
+    border:4px solid rgb(4,4,4);
+    border-radius:34%;
+    box-shadow: 0 -15px 15px rgba(255,255,255,0.06),
+                inset 0 -15px 15px rgba(255,255,255,0.06),
+                 0 15px 15px rgba(0,0,0,0.06),
+                inset 0 15px 15px rgba(0,0,0,0.06);
+}
+.reloj:before{
+    content:'';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    z-index:10000;
+
+}
+
+.reloj .hora, .reloj .min, .reloj .seg{
+    position: absolute;
+}
+
+.reloj .hora, .hr{
+    width: 160px;
+    height: 160px;
+}
+
+.reloj .min, .mn{
+    width: 190px;
+    height: 190px;
+}
+
+.reloj .seg, .sg{
+    width: 230px;
+    height: 230px;
+}
+
+.hr, .mn, .sg{
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr:before{
+    content:'';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: rgb(255, 16, 94);
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+
+.mn:before{
+    content:'';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: rgb(255, 255, 255);
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+
+.sg:before{
+    content:'';
+    position: absolute;
+    width: 1.5px;
+    height: 150px;
+    background: rgb(10,250,255);
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}
